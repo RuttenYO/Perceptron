@@ -15,13 +15,15 @@
 		42C3BB5D19C57D8D00985256 /* PCNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C3BB5C19C57D8D00985256 /* PCNAppDelegate.m */; };
 		42C3BB6019C57D8D00985256 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C3BB5E19C57D8D00985256 /* Main_iPhone.storyboard */; };
 		42C3BB6319C57D8D00985256 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C3BB6119C57D8D00985256 /* Main_iPad.storyboard */; };
-		42C3BB6619C57D8D00985256 /* PCNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C3BB6519C57D8D00985256 /* PCNViewController.m */; };
 		42C3BB6819C57D8D00985256 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42C3BB6719C57D8D00985256 /* Images.xcassets */; };
 		42C3BB6F19C57D8D00985256 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C3BB6E19C57D8D00985256 /* XCTest.framework */; };
 		42C3BB7019C57D8D00985256 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C3BB4C19C57D8D00985256 /* Foundation.framework */; };
 		42C3BB7119C57D8D00985256 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C3BB5019C57D8D00985256 /* UIKit.framework */; };
 		42C3BB7919C57D8D00985256 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42C3BB7719C57D8D00985256 /* InfoPlist.strings */; };
 		42C3BB7B19C57D8D00985256 /* PerceptronTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C3BB7A19C57D8D00985256 /* PerceptronTests.m */; };
+		42C3BB8819C5835900985256 /* PCNMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C3BB8719C5835900985256 /* PCNMainViewController.m */; };
+		42C3BB9019C584F300985256 /* PCNDrawAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C3BB8F19C584F300985256 /* PCNDrawAreaView.m */; };
+		42C3BB9219C5854100985256 /* PCNDrawAreaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C3BB9119C5854100985256 /* PCNDrawAreaView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +49,17 @@
 		42C3BB5C19C57D8D00985256 /* PCNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCNAppDelegate.m; sourceTree = "<group>"; };
 		42C3BB5F19C57D8D00985256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		42C3BB6219C57D8D00985256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		42C3BB6419C57D8D00985256 /* PCNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCNViewController.h; sourceTree = "<group>"; };
-		42C3BB6519C57D8D00985256 /* PCNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCNViewController.m; sourceTree = "<group>"; };
 		42C3BB6719C57D8D00985256 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		42C3BB6D19C57D8D00985256 /* PerceptronTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerceptronTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C3BB6E19C57D8D00985256 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		42C3BB7619C57D8D00985256 /* PerceptronTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PerceptronTests-Info.plist"; sourceTree = "<group>"; };
 		42C3BB7819C57D8D00985256 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		42C3BB7A19C57D8D00985256 /* PerceptronTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerceptronTests.m; sourceTree = "<group>"; };
+		42C3BB8619C5835900985256 /* PCNMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCNMainViewController.h; sourceTree = "<group>"; };
+		42C3BB8719C5835900985256 /* PCNMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCNMainViewController.m; sourceTree = "<group>"; };
+		42C3BB8E19C584F300985256 /* PCNDrawAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCNDrawAreaView.h; sourceTree = "<group>"; };
+		42C3BB8F19C584F300985256 /* PCNDrawAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCNDrawAreaView.m; sourceTree = "<group>"; };
+		42C3BB9119C5854100985256 /* PCNDrawAreaView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCNDrawAreaView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,9 +123,9 @@
 				42C3BB5C19C57D8D00985256 /* PCNAppDelegate.m */,
 				42C3BB5E19C57D8D00985256 /* Main_iPhone.storyboard */,
 				42C3BB6119C57D8D00985256 /* Main_iPad.storyboard */,
-				42C3BB6419C57D8D00985256 /* PCNViewController.h */,
-				42C3BB6519C57D8D00985256 /* PCNViewController.m */,
 				42C3BB6719C57D8D00985256 /* Images.xcassets */,
+				42C3BB8419C5835900985256 /* ViewControllers */,
+				42C3BB8C19C584F300985256 /* View */,
 				42C3BB5319C57D8D00985256 /* Supporting Files */,
 			);
 			path = Perceptron;
@@ -153,6 +158,41 @@
 				42C3BB7719C57D8D00985256 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42C3BB8419C5835900985256 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				42C3BB8519C5835900985256 /* Main */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		42C3BB8519C5835900985256 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				42C3BB8619C5835900985256 /* PCNMainViewController.h */,
+				42C3BB8719C5835900985256 /* PCNMainViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		42C3BB8C19C584F300985256 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				42C3BB8D19C584F300985256 /* DrawArea */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		42C3BB8D19C584F300985256 /* DrawArea */ = {
+			isa = PBXGroup;
+			children = (
+				42C3BB8E19C584F300985256 /* PCNDrawAreaView.h */,
+				42C3BB8F19C584F300985256 /* PCNDrawAreaView.m */,
+				42C3BB9119C5854100985256 /* PCNDrawAreaView.xib */,
+			);
+			path = DrawArea;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +276,7 @@
 				42C3BB6819C57D8D00985256 /* Images.xcassets in Resources */,
 				42C3BB6019C57D8D00985256 /* Main_iPhone.storyboard in Resources */,
 				42C3BB5719C57D8D00985256 /* InfoPlist.strings in Resources */,
+				42C3BB9219C5854100985256 /* PCNDrawAreaView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,9 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42C3BB6619C57D8D00985256 /* PCNViewController.m in Sources */,
 				42C3BB5D19C57D8D00985256 /* PCNAppDelegate.m in Sources */,
+				42C3BB8819C5835900985256 /* PCNMainViewController.m in Sources */,
 				42C3BB5919C57D8D00985256 /* main.m in Sources */,
+				42C3BB9019C584F300985256 /* PCNDrawAreaView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

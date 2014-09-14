@@ -6,17 +6,23 @@
 //  Copyright (c) 2014 Gavr corp. All rights reserved.
 //
 
-#import "PCNViewController.h"
+#import "PCNMainViewController.h"
+#import "PCNDrawAreaView.h"
 
-@interface PCNViewController ()
+@interface PCNMainViewController ()
+
+@property (strong, nonatomic) IBOutlet UIView *drawAreaViewContainerView;
+@property (strong, nonatomic) PCNDrawAreaView *drawAreaView;
 
 @end
 
-@implementation PCNViewController
+@implementation PCNMainViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _drawAreaView = [[PCNDrawAreaView alloc] init];
+    [_drawAreaViewContainerView addSubview:self.drawAreaView];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

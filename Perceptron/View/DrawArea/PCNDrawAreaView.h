@@ -1,5 +1,5 @@
 //
-//  PCNViewController.h
+//  PCNDrawAreaView.h
 //  Perceptron
 //
 //  Created by Artyom Gavryushov on 14.09.14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PCNViewController : UIViewController
+@interface PCNDrawAreaView : UIView
 
 @end
