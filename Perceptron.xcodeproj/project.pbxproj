@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42C3BB4D19C57D8D00985256 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C3BB4C19C57D8D00985256 /* Foundation.framework */; };
+		42C3BB4F19C57D8D00985256 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C3BB4E19C57D8D00985256 /* CoreGraphics.framework */; };
+		42C3BB5119C57D8D00985256 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C3BB5019C57D8D00985256 /* UIKit.framework */; };
+		42C3BB5719C57D8D00985256 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42C3BB5519C57D8D00985256 /* InfoPlist.strings */; };
+		42C3BB5919C57D8D00985256 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C3BB5819C57D8D00985256 /* main.m */; };
+		42C3BB5D19C57D8D00985256 /* PCNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C3BB5C19C57D8D00985256 /* PCNAppDelegate.m */; };
+		42C3BB6019C57D8D00985256 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C3BB5E19C57D8D00985256 /* Main_iPhone.storyboard */; };
+		42C3BB6319C57D8D00985256 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C3BB6119C57D8D00985256 /* Main_iPad.storyboard */; };
+		42C3BB6619C57D8D00985256 /* PCNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C3BB6519C57D8D00985256 /* PCNViewController.m */; };
+		42C3BB6819C57D8D00985256 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42C3BB6719C57D8D00985256 /* Images.xcassets */; };
+		42C3BB6F19C57D8D00985256 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C3BB6E19C57D8D00985256 /* XCTest.framework */; };
+		42C3BB7019C57D8D00985256 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C3BB4C19C57D8D00985256 /* Foundation.framework */; };
+		42C3BB7119C57D8D00985256 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C3BB5019C57D8D00985256 /* UIKit.framework */; };
+		42C3BB7919C57D8D00985256 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42C3BB7719C57D8D00985256 /* InfoPlist.strings */; };
+		42C3BB7B19C57D8D00985256 /* PerceptronTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C3BB7A19C57D8D00985256 /* PerceptronTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		42C3BB7219C57D8D00985256 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42C3BB4119C57D8D00985256 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42C3BB4819C57D8D00985256;
+			remoteInfo = Perceptron;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		42C3BB4919C57D8D00985256 /* Perceptron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Perceptron.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42C3BB4C19C57D8D00985256 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		42C3BB4E19C57D8D00985256 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		42C3BB5019C57D8D00985256 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		42C3BB5419C57D8D00985256 /* Perceptron-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Perceptron-Info.plist"; sourceTree = "<group>"; };
+		42C3BB5619C57D8D00985256 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		42C3BB5819C57D8D00985256 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		42C3BB5A19C57D8D00985256 /* Perceptron-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Perceptron-Prefix.pch"; sourceTree = "<group>"; };
+		42C3BB5B19C57D8D00985256 /* PCNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCNAppDelegate.h; sourceTree = "<group>"; };
+		42C3BB5C19C57D8D00985256 /* PCNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCNAppDelegate.m; sourceTree = "<group>"; };
+		42C3BB5F19C57D8D00985256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		42C3BB6219C57D8D00985256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		42C3BB6419C57D8D00985256 /* PCNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCNViewController.h; sourceTree = "<group>"; };
+		42C3BB6519C57D8D00985256 /* PCNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCNViewController.m; sourceTree = "<group>"; };
+		42C3BB6719C57D8D00985256 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		42C3BB6D19C57D8D00985256 /* PerceptronTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerceptronTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42C3BB6E19C57D8D00985256 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		42C3BB7619C57D8D00985256 /* PerceptronTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PerceptronTests-Info.plist"; sourceTree = "<group>"; };
+		42C3BB7819C57D8D00985256 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		42C3BB7A19C57D8D00985256 /* PerceptronTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerceptronTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42C3BB4619C57D8D00985256 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42C3BB4F19C57D8D00985256 /* CoreGraphics.framework in Frameworks */,
+				42C3BB5119C57D8D00985256 /* UIKit.framework in Frameworks */,
+				42C3BB4D19C57D8D00985256 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42C3BB6A19C57D8D00985256 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42C3BB6F19C57D8D00985256 /* XCTest.framework in Frameworks */,
+				42C3BB7119C57D8D00985256 /* UIKit.framework in Frameworks */,
+				42C3BB7019C57D8D00985256 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42C3BB4019C57D8D00985256 = {
+			isa = PBXGroup;
+			children = (
+				42C3BB5219C57D8D00985256 /* Perceptron */,
+				42C3BB7419C57D8D00985256 /* PerceptronTests */,
+				42C3BB4B19C57D8D00985256 /* Frameworks */,
+				42C3BB4A19C57D8D00985256 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42C3BB4A19C57D8D00985256 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42C3BB4919C57D8D00985256 /* Perceptron.app */,
+				42C3BB6D19C57D8D00985256 /* PerceptronTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42C3BB4B19C57D8D00985256 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42C3BB4C19C57D8D00985256 /* Foundation.framework */,
+				42C3BB4E19C57D8D00985256 /* CoreGraphics.framework */,
+				42C3BB5019C57D8D00985256 /* UIKit.framework */,
+				42C3BB6E19C57D8D00985256 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42C3BB5219C57D8D00985256 /* Perceptron */ = {
+			isa = PBXGroup;
+			children = (
+				42C3BB5B19C57D8D00985256 /* PCNAppDelegate.h */,
+				42C3BB5C19C57D8D00985256 /* PCNAppDelegate.m */,
+				42C3BB5E19C57D8D00985256 /* Main_iPhone.storyboard */,
+				42C3BB6119C57D8D00985256 /* Main_iPad.storyboard */,
+				42C3BB6419C57D8D00985256 /* PCNViewController.h */,
+				42C3BB6519C57D8D00985256 /* PCNViewController.m */,
+				42C3BB6719C57D8D00985256 /* Images.xcassets */,
+				42C3BB5319C57D8D00985256 /* Supporting Files */,
+			);
+			path = Perceptron;
+			sourceTree = "<group>";
+		};
+		42C3BB5319C57D8D00985256 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				42C3BB5419C57D8D00985256 /* Perceptron-Info.plist */,
+				42C3BB5519C57D8D00985256 /* InfoPlist.strings */,
+				42C3BB5819C57D8D00985256 /* main.m */,
+				42C3BB5A19C57D8D00985256 /* Perceptron-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42C3BB7419C57D8D00985256 /* PerceptronTests */ = {
+			isa = PBXGroup;
+			children = (
+				42C3BB7A19C57D8D00985256 /* PerceptronTests.m */,
+				42C3BB7519C57D8D00985256 /* Supporting Files */,
+			);
+			path = PerceptronTests;
+			sourceTree = "<group>";
+		};
+		42C3BB7519C57D8D00985256 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				42C3BB7619C57D8D00985256 /* PerceptronTests-Info.plist */,
+				42C3BB7719C57D8D00985256 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42C3BB4819C57D8D00985256 /* Perceptron */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42C3BB7E19C57D8D00985256 /* Build configuration list for PBXNativeTarget "Perceptron" */;
+			buildPhases = (
+				42C3BB4519C57D8D00985256 /* Sources */,
+				42C3BB4619C57D8D00985256 /* Frameworks */,
+				42C3BB4719C57D8D00985256 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Perceptron;
+			productName = Perceptron;
+			productReference = 42C3BB4919C57D8D00985256 /* Perceptron.app */;
+			productType = "com.apple.product-type.application";
+		};
+		42C3BB6C19C57D8D00985256 /* PerceptronTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42C3BB8119C57D8D00985256 /* Build configuration list for PBXNativeTarget "PerceptronTests" */;
+			buildPhases = (
+				42C3BB6919C57D8D00985256 /* Sources */,
+				42C3BB6A19C57D8D00985256 /* Frameworks */,
+				42C3BB6B19C57D8D00985256 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42C3BB7319C57D8D00985256 /* PBXTargetDependency */,
+			);
+			name = PerceptronTests;
+			productName = PerceptronTests;
+			productReference = 42C3BB6D19C57D8D00985256 /* PerceptronTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42C3BB4119C57D8D00985256 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PCN;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Gavr corp.";
+				TargetAttributes = {
+					42C3BB6C19C57D8D00985256 = {
+						TestTargetID = 42C3BB4819C57D8D00985256;
+					};
+				};
+			};
+			buildConfigurationList = 42C3BB4419C57D8D00985256 /* Build configuration list for PBXProject "Perceptron" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 42C3BB4019C57D8D00985256;
+			productRefGroup = 42C3BB4A19C57D8D00985256 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42C3BB4819C57D8D00985256 /* Perceptron */,
+				42C3BB6C19C57D8D00985256 /* PerceptronTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42C3BB4719C57D8D00985256 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42C3BB6319C57D8D00985256 /* Main_iPad.storyboard in Resources */,
+				42C3BB6819C57D8D00985256 /* Images.xcassets in Resources */,
+				42C3BB6019C57D8D00985256 /* Main_iPhone.storyboard in Resources */,
+				42C3BB5719C57D8D00985256 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42C3BB6B19C57D8D00985256 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42C3BB7919C57D8D00985256 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42C3BB4519C57D8D00985256 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42C3BB6619C57D8D00985256 /* PCNViewController.m in Sources */,
+				42C3BB5D19C57D8D00985256 /* PCNAppDelegate.m in Sources */,
+				42C3BB5919C57D8D00985256 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42C3BB6919C57D8D00985256 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42C3BB7B19C57D8D00985256 /* PerceptronTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42C3BB7319C57D8D00985256 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42C3BB4819C57D8D00985256 /* Perceptron */;
+			targetProxy = 42C3BB7219C57D8D00985256 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		42C3BB5519C57D8D00985256 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42C3BB5619C57D8D00985256 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		42C3BB5E19C57D8D00985256 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42C3BB5F19C57D8D00985256 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		42C3BB6119C57D8D00985256 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42C3BB6219C57D8D00985256 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		42C3BB7719C57D8D00985256 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42C3BB7819C57D8D00985256 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42C3BB7C19C57D8D00985256 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		42C3BB7D19C57D8D00985256 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42C3BB7F19C57D8D00985256 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Perceptron/Perceptron-Prefix.pch";
+				INFOPLIST_FILE = "Perceptron/Perceptron-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		42C3BB8019C57D8D00985256 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Perceptron/Perceptron-Prefix.pch";
+				INFOPLIST_FILE = "Perceptron/Perceptron-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		42C3BB8219C57D8D00985256 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Perceptron.app/Perceptron";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Perceptron/Perceptron-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PerceptronTests/PerceptronTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		42C3BB8319C57D8D00985256 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Perceptron.app/Perceptron";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Perceptron/Perceptron-Prefix.pch";
+				INFOPLIST_FILE = "PerceptronTests/PerceptronTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42C3BB4419C57D8D00985256 /* Build configuration list for PBXProject "Perceptron" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42C3BB7C19C57D8D00985256 /* Debug */,
+				42C3BB7D19C57D8D00985256 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42C3BB7E19C57D8D00985256 /* Build configuration list for PBXNativeTarget "Perceptron" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42C3BB7F19C57D8D00985256 /* Debug */,
+				42C3BB8019C57D8D00985256 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		42C3BB8119C57D8D00985256 /* Build configuration list for PBXNativeTarget "PerceptronTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42C3BB8219C57D8D00985256 /* Debug */,
+				42C3BB8319C57D8D00985256 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42C3BB4119C57D8D00985256 /* Project object */;
+}
