@@ -10,4 +10,7 @@
 
 @interface PCNDrawAreaView : UIView
 
+- (UIImageView *)trimmedCharacterImage;
+- (void)clearDrawAreaImage;
+
 @end

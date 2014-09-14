@@ -25,8 +25,114 @@
                                     <constraint firstAttribute="width" constant="320" id="fU8-nG-M9g"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U6d-m9-aOs">
+                                <rect key="frame" x="20" y="67" width="82" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="CLEAR DRAW AREA">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="14" name="Optima-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="clearDrawAreaDidPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RhR-f7-fVt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="44C-gm-BPs">
+                                <rect key="frame" x="114" y="61" width="89" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="CLEAR VECTOR FILE">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="14" name="Optima-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="clearDrawAreaDidPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="94X-J8-gpY"/>
+                                    <action selector="cleareVectorFileDidPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0MN-hg-q6B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3aY-Sj-KQg">
+                                <rect key="frame" x="211" y="61" width="89" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="SHOW VECTOR FILE">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="14" name="Optima-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="clearDrawAreaDidPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="loA-Na-UI9"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="K9l-Xt-yZK">
+                                <rect key="frame" x="20" y="20" width="280" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <segments>
+                                    <segment title="Teaching"/>
+                                    <segment title="Recognizer"/>
+                                </segments>
+                                <connections>
+                                    <action selector="modeValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="hAj-qh-FR5"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FEu-Nh-eFc">
+                                <rect key="frame" x="99" y="452" width="123" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="А"/>
+                                    <segment title="Г"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwc-cc-2Ob">
+                                <rect key="frame" x="99" y="518" width="123" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
+                                <state key="normal" title="TEACH">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="teachButtonDidPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="afZ-th-RLY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yeh-Fo-Vjl">
+                                <rect key="frame" x="150" y="452" width="112" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHd-Ms-9EN">
+                                <rect key="frame" x="5" y="467" width="115" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
+                                <state key="normal" title="RECOGNIZE">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recognizeButtonDidPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gai-Mm-WSi"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="maz-Jh-dvQ" secondAttribute="centerX" id="9Gs-0y-kfe"/>
                             <constraint firstItem="maz-Jh-dvQ" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="cla-zx-9Ha"/>
@@ -34,6 +140,11 @@
                     </view>
                     <connections>
                         <outlet property="drawAreaViewContainerView" destination="maz-Jh-dvQ" id="Mcc-0Z-g0p"/>
+                        <outlet property="modeSegmentedControl" destination="K9l-Xt-yZK" id="FeD-u2-yiK"/>
+                        <outlet property="recognizeAnswerLabel" destination="Yeh-Fo-Vjl" id="SqN-9x-xuV"/>
+                        <outlet property="recognizeButton" destination="hHd-Ms-9EN" id="Xgg-6E-kCq"/>
+                        <outlet property="teachButton" destination="wwc-cc-2Ob" id="03e-65-aVe"/>
+                        <outlet property="teachingCharacterSegmentedControl" destination="FEu-Nh-eFc" id="3i4-nJ-wol"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

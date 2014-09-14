@@ -8,11 +8,19 @@
 
 #import "PCNMainViewController.h"
 #import "PCNDrawAreaView.h"
+#import "PCNTeachProvider.h"
 
 @interface PCNMainViewController ()
 
 @property (strong, nonatomic) IBOutlet UIView *drawAreaViewContainerView;
 @property (strong, nonatomic) PCNDrawAreaView *drawAreaView;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *teachingCharacterSegmentedControl;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *modeSegmentedControl;
+@property (strong, nonatomic) IBOutlet UIButton *teachButton;
+@property (strong, nonatomic) IBOutlet UILabel *recognizeAnswerLabel;
+@property (strong, nonatomic) IBOutlet UIButton *recognizeButton;
+
+@property (strong, nonatomic) UIImageView *characterImageView;
 
 @end
 
@@ -23,13 +31,44 @@
     [super viewDidLoad];
     _drawAreaView = [[PCNDrawAreaView alloc] init];
     [_drawAreaViewContainerView addSubview:self.drawAreaView];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.recognizeAnswerLabel.hidden = YES;
+    self.recognizeButton.hidden = YES;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)clearDrawAreaDidPressed:(id)sender {
+    [self.drawAreaView clearDrawAreaImage];
+}
+
+- (IBAction)modeValueChanged:(id)sender {
+    if (self.modeSegmentedControl.selectedSegmentIndex == 0) {
+            self.teachingCharacterSegmentedControl.hidden = NO;
+        self.teachButton.hidden = NO;
+        self.recognizeAnswerLabel.hidden = YES;
+        self.recognizeButton.hidden = YES;
+    } else {
+            self.teachingCharacterSegmentedControl.hidden = YES;
+        self.teachButton.hidden = YES;
+        self.recognizeAnswerLabel.hidden = NO;
+        self.recognizeButton.hidden = NO;
+    }
+}
+
+- (IBAction)cleareVectorFileDidPressed:(id)sender {
+    
+    
+    
+}
+
+- (IBAction)teachButtonDidPressed:(id)sender {
+    
+    self.characterImageView = [self.drawAreaView trimmedCharacterImage];
+    PCNTeachProvider *teacher = [[PCNTeachProvider alloc] initWithImageView:self.characterImageView];
+    [teacher saveToFileVectorOfCharacter:self.teachingCharacterSegmentedControl.selectedSegmentIndex];
+    
+}
+
+
+- (IBAction)recognizeButtonDidPressed:(id)sender {
 }
 
 @end
