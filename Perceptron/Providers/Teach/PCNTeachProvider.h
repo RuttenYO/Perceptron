@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PCNColorOfPointProtocol.h"
 
 @interface PCNTeachProvider : NSObject
 
--(id)initWithImageView:(UIImageView *)imageView;
+- (id)initWithImageView:(UIImageView *)imageView delegate:(id<PCNColorOfPointProtocol>)delegate;
 - (void)saveToFileVectorOfCharacter:(NSInteger)characterType;
 
 @end

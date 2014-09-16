@@ -90,7 +90,7 @@
     for (int i=0; i < self.frame.size.width; i++) {
         for (int j=0; j < self.frame.size.height; j++) {
             
-            if ([[self colorOfPoint:CGPointMake(i, j)] isEqual:myBlackColor]) {
+            if ([[self colorOfPoint:CGPointMake(i, j) inView:self] isEqual:myBlackColor]) {
                 if (characterUpperLeftCornerPoint.x == -1) {
                     characterUpperLeftCornerPoint.x = i;
                 }
@@ -120,14 +120,14 @@
 }
 
 
-- (UIColor *)colorOfPoint:(CGPoint)point
+- (UIColor *)colorOfPoint:(CGPoint)point inView:(UIView *)view
 {
     unsigned char pixel[4] = {0};
     
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     CGContextRef context = CGBitmapContextCreate(pixel, 1, 1, 8, 4, colorSpace, kCGBitmapAlphaInfoMask & kCGImageAlphaPremultipliedLast);
     CGContextTranslateCTM(context, -point.x, -point.y);
-    [self.layer renderInContext:context];
+    [view.layer renderInContext:context];
     CGContextRelease(context);
     CGColorSpaceRelease(colorSpace);
     

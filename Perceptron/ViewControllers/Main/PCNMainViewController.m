@@ -54,19 +54,15 @@
 }
 
 - (IBAction)cleareVectorFileDidPressed:(id)sender {
-    
-    
-    
 }
 
-- (IBAction)teachButtonDidPressed:(id)sender {
-    
+- (IBAction)teachButtonDidPressed:(id)sender
+{
     self.characterImageView = [self.drawAreaView trimmedCharacterImage];
-    PCNTeachProvider *teacher = [[PCNTeachProvider alloc] initWithImageView:self.characterImageView];
+    PCNTeachProvider *teacher = [[PCNTeachProvider alloc] initWithImageView:self.characterImageView delegate:self.drawAreaView];
     [teacher saveToFileVectorOfCharacter:self.teachingCharacterSegmentedControl.selectedSegmentIndex];
     
 }
-
 
 - (IBAction)recognizeButtonDidPressed:(id)sender {
 }

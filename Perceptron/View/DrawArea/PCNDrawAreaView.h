@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PCNColorOfPointProtocol.h"
 
-@interface PCNDrawAreaView : UIView
+@interface PCNDrawAreaView : UIView<PCNColorOfPointProtocol>
 
 - (UIImageView *)trimmedCharacterImage;
 - (void)clearDrawAreaImage;

@@ -9,6 +9,7 @@
 #import "PCNTeachProvider.h"
 #import "PCNDrawAreaView.h"
 
+
 @interface PCNTeachProvider()
 
 @property (nonatomic, strong) UIImageView *characterImageView;
@@ -17,11 +18,13 @@
 @property (nonatomic, strong) NSString *documentsDirectory;
 @property (nonatomic, strong) NSString *fileName;
 
+@property (weak, nonatomic) id<PCNColorOfPointProtocol> colorOfPointDelegate;
+
 @end
 
 @implementation PCNTeachProvider
 
-- (id)initWithImageView:(UIImageView *)imageView{
+- (id)initWithImageView:(UIImageView *)imageView delegate:(id<PCNColorOfPointProtocol>)delegate{
     
     self = [super init];
     if (self) {
@@ -31,6 +34,7 @@
         _documentsDirectory = [self.paths objectAtIndex:0];
         _fileName = [NSString stringWithFormat:@"%@/vectorA.txt",
                               self.documentsDirectory];
+        _colorOfPointDelegate = delegate;
     }
     return self;
 }
@@ -52,7 +56,7 @@
             {
                 for (int y = j*dy; y < (j+1) * dy; y++)
                 {
-                    if ([[self colorOfPoint:CGPointMake(x, y)] isEqual:myBlackColor]){
+                    if ([[self.colorOfPointDelegate colorOfPoint:CGPointMake(x, y) inView:self.characterImageView] isEqual:myBlackColor]){
                         isBlackPixel = YES;
                     }
                 }
@@ -107,21 +111,6 @@
     
     [[NSFileManager defaultManager] createFileAtPath:self.fileName contents:[NSData data] attributes:nil];
     
-}
-
-- (UIColor *)colorOfPoint:(CGPoint)point
-{
-    unsigned char pixel[4] = {0};
-    
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGContextRef context = CGBitmapContextCreate(pixel, 1, 1, 8, 4, colorSpace, kCGBitmapAlphaInfoMask & kCGImageAlphaPremultipliedLast);
-    CGContextTranslateCTM(context, -point.x, -point.y);
-    [self.characterImageView.layer renderInContext:context];
-    CGContextRelease(context);
-    CGColorSpaceRelease(colorSpace);
-    
-    UIColor *color = [UIColor colorWithRed:pixel[0]/255.0 green:pixel[1]/255.0 blue:pixel[2]/255.0 alpha:pixel[3]/255.0];
-    return color;
 }
 
 
