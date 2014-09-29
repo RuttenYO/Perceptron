@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42BF8E9B19DA05C300576AAB /* PCNNeuron.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BF8E9A19DA05C300576AAB /* PCNNeuron.m */; };
 		42C3BB4D19C57D8D00985256 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C3BB4C19C57D8D00985256 /* Foundation.framework */; };
 		42C3BB4F19C57D8D00985256 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C3BB4E19C57D8D00985256 /* CoreGraphics.framework */; };
 		42C3BB5119C57D8D00985256 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C3BB5019C57D8D00985256 /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42BF8E9919DA05C300576AAB /* PCNNeuron.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCNNeuron.h; sourceTree = "<group>"; };
+		42BF8E9A19DA05C300576AAB /* PCNNeuron.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCNNeuron.m; sourceTree = "<group>"; };
 		42C213E819C8D7B7006B75E3 /* PCNColorOfPointProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCNColorOfPointProtocol.h; sourceTree = "<group>"; };
 		42C3BB4919C57D8D00985256 /* Perceptron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Perceptron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C3BB4C19C57D8D00985256 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -90,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42BF8E9819DA05C300576AAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				42BF8E9919DA05C300576AAB /* PCNNeuron.h */,
+				42BF8E9A19DA05C300576AAB /* PCNNeuron.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		42C213E719C8D7B7006B75E3 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +148,7 @@
 				42C3BB5E19C57D8D00985256 /* Main_iPhone.storyboard */,
 				42C3BB6119C57D8D00985256 /* Main_iPad.storyboard */,
 				42C3BB6719C57D8D00985256 /* Images.xcassets */,
+				42BF8E9819DA05C300576AAB /* Model */,
 				42C213E719C8D7B7006B75E3 /* Protocols */,
 				42C3BB9619C5BD9300985256 /* Providers */,
 				42C3BB8419C5835900985256 /* ViewControllers */,
@@ -334,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42BF8E9B19DA05C300576AAB /* PCNNeuron.m in Sources */,
 				42C3BB5D19C57D8D00985256 /* PCNAppDelegate.m in Sources */,
 				42C3BB8819C5835900985256 /* PCNMainViewController.m in Sources */,
 				42C3BB5919C57D8D00985256 /* main.m in Sources */,
