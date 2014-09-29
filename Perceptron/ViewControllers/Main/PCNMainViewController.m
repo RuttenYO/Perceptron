@@ -65,6 +65,7 @@
 }
 
 - (IBAction)recognizeButtonDidPressed:(id)sender {
+    ////dsfdsfdsf
 }
 
 @end

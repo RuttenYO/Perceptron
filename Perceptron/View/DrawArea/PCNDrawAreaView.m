@@ -119,6 +119,7 @@
     self.drawImageView.image = nil;
 }
 
+#pragma mark - PCNColorOfPointProtocol methods
 
 - (UIColor *)colorOfPoint:(CGPoint)point inView:(UIView *)view
 {
