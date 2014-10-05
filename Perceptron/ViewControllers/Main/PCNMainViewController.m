@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *teachButton;
 @property (strong, nonatomic) IBOutlet UILabel *recognizeAnswerLabel;
 @property (strong, nonatomic) IBOutlet UIButton *recognizeButton;
+@property (strong, nonatomic) PCNTeachProvider* teacher;
 
 @property (strong, nonatomic) UIImageView *characterImageView;
 
@@ -54,13 +55,15 @@
 }
 
 - (IBAction)cleareVectorFileDidPressed:(id)sender {
+    [self.teacher tempMethodForDeletingFile];
+    
 }
 
 - (IBAction)teachButtonDidPressed:(id)sender
 {
     self.characterImageView = [self.drawAreaView trimmedCharacterImage];
-    PCNTeachProvider *teacher = [[PCNTeachProvider alloc] initWithImageView:self.characterImageView delegate:self.drawAreaView];
-    [teacher saveToFileVectorOfCharacter:self.teachingCharacterSegmentedControl.selectedSegmentIndex];
+    self.teacher = [[PCNTeachProvider alloc] initWithImageView:self.characterImageView delegate:self.drawAreaView];
+    [self.teacher saveToFileVectorOfCharacter:self.teachingCharacterSegmentedControl.selectedSegmentIndex];
     
 }
 

@@ -56,7 +56,6 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="clearDrawAreaDidPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="94X-J8-gpY"/>
                                     <action selector="cleareVectorFileDidPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0MN-hg-q6B"/>
                                 </connections>
                             </button>

@@ -39,8 +39,8 @@
     return self;
 }
 
-- (void)vectorOfCharacter{
-    
+- (void)vectorOfCharacter
+{
     int countOfSections = 10;
     int dx = round(self.characterImageView.frame.size.width / countOfSections);
     int dy = round(self.characterImageView.frame.size.height/ countOfSections);
@@ -109,7 +109,11 @@
 
 - (void)tempMethodForDeletingFile{
     
-    [[NSFileManager defaultManager] createFileAtPath:self.fileName contents:[NSData data] attributes:nil];
+    NSError *error;
+    [[NSFileManager defaultManager] removeItemAtPath:self.fileName error:&error];
+    if (error){
+        NSLog(@"%@", error);
+    }
     
 }
 
