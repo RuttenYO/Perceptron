@@ -9,6 +9,7 @@
 #import "PCNMainViewController.h"
 #import "PCNDrawAreaView.h"
 #import "PCNTeachProvider.h"
+#import "PCNVectorFileManager.h"
 
 @interface PCNMainViewController ()
 
@@ -55,8 +56,8 @@
 }
 
 - (IBAction)cleareVectorFileDidPressed:(id)sender {
-    [self.teacher tempMethodForDeletingFile];
-    
+    PCNVectorFileManager *fileManager = [[PCNVectorFileManager alloc] init];
+    [fileManager deleteVectorFile];
 }
 
 - (IBAction)teachButtonDidPressed:(id)sender

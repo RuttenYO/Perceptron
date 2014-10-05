@@ -13,6 +13,5 @@
 
 - (id)initWithImageView:(UIImageView *)imageView delegate:(id<PCNColorOfPointProtocol>)delegate;
 - (void)saveToFileVectorOfCharacter:(NSInteger)characterType;
-- (void)tempMethodForDeletingFile;
 
 @end
