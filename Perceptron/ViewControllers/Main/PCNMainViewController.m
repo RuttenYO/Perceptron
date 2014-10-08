@@ -69,6 +69,8 @@
 }
 
 - (IBAction)recognizeButtonDidPressed:(id)sender {
+    //trololo
+    
 }
 
 @end
