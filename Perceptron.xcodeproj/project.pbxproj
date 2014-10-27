@@ -28,6 +28,7 @@
 		42C3BB9219C5854100985256 /* PCNDrawAreaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C3BB9119C5854100985256 /* PCNDrawAreaView.xib */; };
 		42C3BB9B19C5BD9300985256 /* PCNTeachProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C3BB9A19C5BD9300985256 /* PCNTeachProvider.m */; };
 		42CFD87419FEF95200FBF1C7 /* PCNShowVectorFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CFD87319FEF95100FBF1C7 /* PCNShowVectorFileViewController.m */; };
+		42CFD87719FF036100FBF1C7 /* PCNNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CFD87619FF036100FBF1C7 /* PCNNet.m */; };
 		AC25F1A319E6BB9900A6C9E4 /* PCNLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC25F1A219E6BB9900A6C9E4 /* PCNLayer.m */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,8 @@
 		42C3BB9A19C5BD9300985256 /* PCNTeachProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCNTeachProvider.m; sourceTree = "<group>"; };
 		42CFD87219FEF95100FBF1C7 /* PCNShowVectorFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCNShowVectorFileViewController.h; sourceTree = "<group>"; };
 		42CFD87319FEF95100FBF1C7 /* PCNShowVectorFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCNShowVectorFileViewController.m; sourceTree = "<group>"; };
+		42CFD87519FF036100FBF1C7 /* PCNNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCNNet.h; sourceTree = "<group>"; };
+		42CFD87619FF036100FBF1C7 /* PCNNet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCNNet.m; sourceTree = "<group>"; };
 		AC25F1A119E6BB9900A6C9E4 /* PCNLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCNLayer.h; sourceTree = "<group>"; };
 		AC25F1A219E6BB9900A6C9E4 /* PCNLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCNLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +121,8 @@
 				42BF8E9A19DA05C300576AAB /* PCNNeuron.m */,
 				AC25F1A119E6BB9900A6C9E4 /* PCNLayer.h */,
 				AC25F1A219E6BB9900A6C9E4 /* PCNLayer.m */,
+				42CFD87519FF036100FBF1C7 /* PCNNet.h */,
+				42CFD87619FF036100FBF1C7 /* PCNNet.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -383,6 +388,7 @@
 				42C3BB5D19C57D8D00985256 /* PCNAppDelegate.m in Sources */,
 				AC25F1A319E6BB9900A6C9E4 /* PCNLayer.m in Sources */,
 				42CFD87419FEF95200FBF1C7 /* PCNShowVectorFileViewController.m in Sources */,
+				42CFD87719FF036100FBF1C7 /* PCNNet.m in Sources */,
 				42C3BB8819C5835900985256 /* PCNMainViewController.m in Sources */,
 				42C3BB5919C57D8D00985256 /* main.m in Sources */,
 				42C3BB9B19C5BD9300985256 /* PCNTeachProvider.m in Sources */,
