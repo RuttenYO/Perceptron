@@ -20,8 +20,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *teachButton;
 @property (strong, nonatomic) IBOutlet UILabel *recognizeAnswerLabel;
 @property (strong, nonatomic) IBOutlet UIButton *recognizeButton;
-@property (strong, nonatomic) PCNTeachProvider* teacher;
 
+@property (strong, nonatomic) PCNTeachProvider* teacher;
 @property (strong, nonatomic) UIImageView *characterImageView;
 
 @end
@@ -71,6 +71,10 @@
 - (IBAction)recognizeButtonDidPressed:(id)sender {
     //trololo
     
+}
+
+-(BOOL)shouldAutorotate {
+    return NO;
 }
 
 @end

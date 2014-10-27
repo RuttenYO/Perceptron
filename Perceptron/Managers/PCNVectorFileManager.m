@@ -27,6 +27,13 @@
     return self;
 }
 
+-(void) saveToTextFileVectorOfCharacterString:(NSString *)vectorOfCharacterString {
+    [vectorOfCharacterString writeToFile:self.fileName
+                              atomically:NO
+                                encoding:NSStringEncodingConversionAllowLossy
+                                   error:nil];
+}
+
 -(void) writeToTextFileVectorOfCharacterString:(NSString *)vectorOfCharacterString
 {
     if ([[NSFileManager defaultManager] fileExistsAtPath:self.fileName]) {
@@ -36,16 +43,24 @@
         contentOfFile = [contentOfFile stringByAppendingString:@"\n"];
         NSLog(@"%@", contentOfFile);
         contentOfFile = [contentOfFile stringByAppendingString:vectorOfCharacterString];
-        [contentOfFile writeToFile:self.fileName
-                        atomically:NO
-                          encoding:NSStringEncodingConversionAllowLossy
-                             error:nil];
+        [self saveToTextFileVectorOfCharacterString:contentOfFile];
+//        [contentOfFile writeToFile:self.fileName
+//                        atomically:NO
+//                          encoding:NSStringEncodingConversionAllowLossy
+//                             error:nil];
     }else{
-        [vectorOfCharacterString writeToFile:self.fileName
-                                       atomically:NO
-                                         encoding:NSStringEncodingConversionAllowLossy
-                                            error:nil];
+        [self saveToTextFileVectorOfCharacterString:vectorOfCharacterString];
+//        [vectorOfCharacterString writeToFile:self.fileName
+//                                       atomically:NO
+//                                         encoding:NSStringEncodingConversionAllowLossy
+//                                            error:nil];
     }
+}
+
+- (NSString *)showVectorFileString {
+    return  [[NSString alloc] initWithContentsOfFile:self.fileName
+                                        usedEncoding:nil
+                                               error:nil];
 }
 
 - (void)deleteVectorFile

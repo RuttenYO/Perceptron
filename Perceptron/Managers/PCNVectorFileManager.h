@@ -11,6 +11,8 @@
 @interface PCNVectorFileManager : NSObject
 
 -(void) writeToTextFileVectorOfCharacterString:(NSString *)vectorOfCharacterString;
+-(void) saveToTextFileVectorOfCharacterString:(NSString *)vectorOfCharacterString;
+- (NSString *)showVectorFileString;
 - (void)deleteVectorFile;
 
 @end
