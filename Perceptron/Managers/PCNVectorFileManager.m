@@ -14,6 +14,8 @@
 @property (nonatomic, strong) NSString *documentsDirectory;
 @property (nonatomic, strong) NSArray *paths;
 
+@property (nonatomic, strong) NSMutableArray *vectorsInFile;
+
 @end
 
 @implementation PCNVectorFileManager
@@ -22,45 +24,31 @@
 {
     _paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     _documentsDirectory = [self.paths objectAtIndex:0];
-    _fileName = [NSString stringWithFormat:@"%@/vectorFile.txt",
-                 self.documentsDirectory];
+    _fileName = [NSString stringWithFormat:@"%@/vectorFile.txt", self.documentsDirectory];
     return self;
 }
 
--(void) saveToTextFileVectorOfCharacterString:(NSString *)vectorOfCharacterString {
-    [vectorOfCharacterString writeToFile:self.fileName
-                              atomically:NO
-                                encoding:NSStringEncodingConversionAllowLossy
-                                   error:nil];
+- (void)saveToTextFileCharacterVectorArray:(NSMutableArray *)characterVectorArray {
+    [characterVectorArray writeToFile:self.fileName atomically:NO];
+    NSLog(@"%@",[self.vectorsInFile componentsJoinedByString:@"\n"]);
 }
 
--(void) writeToTextFileVectorOfCharacterString:(NSString *)vectorOfCharacterString
+- (void)writeToTextFileCharacterVectorArray:(NSMutableArray *)characterVectorArray
 {
     if ([[NSFileManager defaultManager] fileExistsAtPath:self.fileName]) {
-        NSString *contentOfFile = [[NSString alloc] initWithContentsOfFile:self.fileName
-                                                              usedEncoding:nil
-                                                                     error:nil];
-        contentOfFile = [contentOfFile stringByAppendingString:@"\n"];
-        NSLog(@"%@", contentOfFile);
-        contentOfFile = [contentOfFile stringByAppendingString:vectorOfCharacterString];
-        [self saveToTextFileVectorOfCharacterString:contentOfFile];
-//        [contentOfFile writeToFile:self.fileName
-//                        atomically:NO
-//                          encoding:NSStringEncodingConversionAllowLossy
-//                             error:nil];
-    }else{
-        [self saveToTextFileVectorOfCharacterString:vectorOfCharacterString];
-//        [vectorOfCharacterString writeToFile:self.fileName
-//                                       atomically:NO
-//                                         encoding:NSStringEncodingConversionAllowLossy
-//                                            error:nil];
+        self.vectorsInFile = [[NSMutableArray alloc] initWithContentsOfFile:self.fileName];
+        [self.vectorsInFile addObject:characterVectorArray];
+        [self saveToTextFileCharacterVectorArray:self.vectorsInFile];
+    }
+    else {
+        self.vectorsInFile = [[NSMutableArray alloc] init];
+        [self.vectorsInFile addObject:characterVectorArray];
+        [self saveToTextFileCharacterVectorArray:self.vectorsInFile];
     }
 }
 
-- (NSString *)showVectorFileString {
-    return  [[NSString alloc] initWithContentsOfFile:self.fileName
-                                        usedEncoding:nil
-                                               error:nil];
+- (NSMutableArray *)vectorArray {
+    return  [[NSMutableArray alloc] initWithContentsOfFile:self.fileName];
 }
 
 - (void)deleteVectorFile

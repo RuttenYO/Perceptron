@@ -19,19 +19,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    PCNVectorFileManager *fileManager = [[PCNVectorFileManager alloc] init];
-    NSString *vectorFileText = [fileManager showVectorFileString];
-    [self.vectorFileTextView setText:vectorFileText];
+    [self showFileContent];
 }
 
 - (IBAction)backButtonDidPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)saveVectorToFile:(id)sender {
-    [self.vectorFileTextView resignFirstResponder];
+- (void)showFileContent {
     PCNVectorFileManager *fileManager = [[PCNVectorFileManager alloc] init];
-    [fileManager saveToTextFileVectorOfCharacterString:[self.vectorFileTextView text]];
+    NSString *vectorFileText;
+    NSMutableArray *vectorsArray = [fileManager vectorArray];
+    for (NSMutableArray *vector in vectorsArray) {
+        if (vectorFileText == nil) {
+            vectorFileText = [vector componentsJoinedByString:@" "];
+        }
+        else {
+        vectorFileText = [vectorFileText stringByAppendingString:[vector componentsJoinedByString:@" "]];
+        }
+        vectorFileText = [vectorFileText stringByAppendingString:@"\n"];
+    }
+    NSLog(@"@%", vectorFileText);
+    [self.vectorFileTextView setText:vectorFileText];
 }
 
 

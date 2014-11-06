@@ -10,9 +10,9 @@
 
 @interface PCNVectorFileManager : NSObject
 
--(void) writeToTextFileVectorOfCharacterString:(NSString *)vectorOfCharacterString;
--(void) saveToTextFileVectorOfCharacterString:(NSString *)vectorOfCharacterString;
-- (NSString *)showVectorFileString;
+- (void)writeToTextFileCharacterVectorArray:(NSMutableArray *)characterVectorArray;
+- (void)saveToTextFileCharacterVectorArray:(NSMutableArray *)characterVectorArray;
+- (NSMutableArray *)vectorArray;
 - (void)deleteVectorFile;
 
 @end

@@ -14,7 +14,7 @@
 @interface PCNTeachProvider()
 
 @property (nonatomic, strong) UIImageView *characterImageView;
-@property (nonatomic, strong) NSString *vectorOfCharacterString;
+@property (nonatomic, strong) NSMutableArray *characterVectorArray;
 @property (nonatomic, strong) PCNVectorFileManager *fileManager;
 
 @property (weak, nonatomic) id<PCNColorOfPointProtocol> colorOfPointDelegate;
@@ -28,7 +28,7 @@
     self = [super init];
     if (self) {
         _characterImageView = imageView;
-        _vectorOfCharacterString = [[NSString alloc] initWithFormat:@""];
+        _characterVectorArray = [[NSMutableArray alloc] init];
         _colorOfPointDelegate = delegate;
         _fileManager = [[PCNVectorFileManager alloc] init];
     }
@@ -59,24 +59,28 @@
                 if (isBlackPixel) break;
             }
             if (isBlackPixel){
-                self.vectorOfCharacterString = [self.vectorOfCharacterString stringByAppendingString:@"1"];
+//                self.characterVectorArray = [self.characterVectorArray stringByAppendingString:@"1"];
+                [self.characterVectorArray addObject:[NSNumber numberWithInt:1]];
             }else{
-                self.vectorOfCharacterString = [self.vectorOfCharacterString stringByAppendingString:@"0"];
+//                self.characterVectorArray = [self.characterVectorArray stringByAppendingString:@"0"];
+                [self.characterVectorArray addObject:[NSNumber numberWithInt:0]];
             }
         }
     }
-    NSLog(@"%@", self.vectorOfCharacterString);
 }
 
 - (void)saveToFileVectorOfCharacter:(NSInteger)characterType
 {    
     [self vectorOfCharacter];
     if (characterType == 0) {
-         self.vectorOfCharacterString = [self.vectorOfCharacterString stringByAppendingString:@"1"];
+//         self.characterVectorArray = [self.characterVectorArray stringByAppendingString:@"1"];
+        [self.characterVectorArray addObject:[NSNumber numberWithInt:1]];
     } else {
-         self.vectorOfCharacterString = [self.vectorOfCharacterString stringByAppendingString:@"-1"];
+//         self.characterVectorArray = [self.characterVectorArray stringByAppendingString:@"-1"];
+        [self.characterVectorArray addObject:[NSNumber numberWithInt:-1]];
     }
-    [self.fileManager writeToTextFileVectorOfCharacterString:self.vectorOfCharacterString];
+    NSLog(@"%@",[self.characterVectorArray componentsJoinedByString:@" "]);
+    [self.fileManager writeToTextFileCharacterVectorArray:self.characterVectorArray];
     
 }
 
