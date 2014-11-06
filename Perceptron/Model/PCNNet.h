@@ -10,4 +10,8 @@
 
 @interface PCNNet : PCNLayer
 
+@property (nonatomic, strong) NSMutableArray *layers;
+@property (nonatomic, strong) NSMutableArray *weights;
+@property (nonatomic, strong) NSMutableArray *neuronErrors;
+
 @end

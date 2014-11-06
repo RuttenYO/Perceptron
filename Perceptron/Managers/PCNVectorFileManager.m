@@ -47,7 +47,7 @@
     }
 }
 
-- (NSMutableArray *)vectorArray {
+- (NSMutableArray *)vectorsArray {
     return  [[NSMutableArray alloc] initWithContentsOfFile:self.fileName];
 }
 

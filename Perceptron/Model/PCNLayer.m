@@ -17,7 +17,7 @@
 
 @implementation PCNLayer
 
-- (id)initWithCountOfNeurons:(NSInteger) countOfNeurons;
+- (id)initWithCountOfNeurons:(NSInteger) countOfNeurons
 {
     self = [super init];
     if (self) {

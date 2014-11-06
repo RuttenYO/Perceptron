@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) NSMutableArray *neuronsAtLayer;
 
+- (id)initWithCountOfNeurons:(NSInteger)countOfNeurons;
+
 @end

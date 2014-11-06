@@ -14,7 +14,6 @@
 @interface PCNTeachProvider()
 
 @property (nonatomic, strong) UIImageView *characterImageView;
-@property (nonatomic, strong) NSMutableArray *characterVectorArray;
 @property (nonatomic, strong) PCNVectorFileManager *fileManager;
 
 @property (weak, nonatomic) id<PCNColorOfPointProtocol> colorOfPointDelegate;
@@ -59,10 +58,8 @@
                 if (isBlackPixel) break;
             }
             if (isBlackPixel){
-//                self.characterVectorArray = [self.characterVectorArray stringByAppendingString:@"1"];
                 [self.characterVectorArray addObject:[NSNumber numberWithInt:1]];
             }else{
-//                self.characterVectorArray = [self.characterVectorArray stringByAppendingString:@"0"];
                 [self.characterVectorArray addObject:[NSNumber numberWithInt:0]];
             }
         }
@@ -73,10 +70,8 @@
 {    
     [self vectorOfCharacter];
     if (characterType == 0) {
-//         self.characterVectorArray = [self.characterVectorArray stringByAppendingString:@"1"];
         [self.characterVectorArray addObject:[NSNumber numberWithInt:1]];
     } else {
-//         self.characterVectorArray = [self.characterVectorArray stringByAppendingString:@"-1"];
         [self.characterVectorArray addObject:[NSNumber numberWithInt:-1]];
     }
     NSLog(@"%@",[self.characterVectorArray componentsJoinedByString:@" "]);

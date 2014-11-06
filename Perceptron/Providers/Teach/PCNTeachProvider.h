@@ -11,6 +11,8 @@
 
 @interface PCNTeachProvider : NSObject
 
+@property (nonatomic, strong) NSMutableArray *characterVectorArray;
+
 - (id)initWithImageView:(UIImageView *)imageView delegate:(id<PCNColorOfPointProtocol>)delegate;
 - (void)saveToFileVectorOfCharacter:(NSInteger)characterType;
 

@@ -29,7 +29,7 @@
 - (void)showFileContent {
     PCNVectorFileManager *fileManager = [[PCNVectorFileManager alloc] init];
     NSString *vectorFileText;
-    NSMutableArray *vectorsArray = [fileManager vectorArray];
+    NSMutableArray *vectorsArray = [fileManager vectorsArray];
     for (NSMutableArray *vector in vectorsArray) {
         if (vectorFileText == nil) {
             vectorFileText = [vector componentsJoinedByString:@" "];
@@ -39,7 +39,7 @@
         }
         vectorFileText = [vectorFileText stringByAppendingString:@"\n"];
     }
-    NSLog(@"@%", vectorFileText);
+    NSLog(@"%@", vectorFileText);
     [self.vectorFileTextView setText:vectorFileText];
 }
 

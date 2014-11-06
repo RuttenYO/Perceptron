@@ -12,7 +12,7 @@
 
 - (void)writeToTextFileCharacterVectorArray:(NSMutableArray *)characterVectorArray;
 - (void)saveToTextFileCharacterVectorArray:(NSMutableArray *)characterVectorArray;
-- (NSMutableArray *)vectorArray;
+- (NSMutableArray *)vectorsArray;
 - (void)deleteVectorFile;
 
 @end
