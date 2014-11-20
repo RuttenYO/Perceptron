@@ -90,7 +90,7 @@
     for (int i=0; i < self.frame.size.width; i++) {
         for (int j=0; j < self.frame.size.height; j++) {
             
-            if ([[self colorOfPoint:CGPointMake(i, j) inView:self] isEqual:myBlackColor]) {
+            if ([[self colorOfPoint:CGPointMake(i, j) inView:self.drawImageView] isEqual:myBlackColor]) {
                 if (characterUpperLeftCornerPoint.x == -1) {
                     characterUpperLeftCornerPoint.x = i;
                 }

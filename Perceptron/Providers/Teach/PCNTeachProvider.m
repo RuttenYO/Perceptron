@@ -9,6 +9,7 @@
 #import "PCNTeachProvider.h"
 #import "PCNDrawAreaView.h"
 #import "PCNVectorFileManager.h"
+#import "PCNNet.h"
 
 
 @interface PCNTeachProvider()
@@ -76,6 +77,7 @@
     }
     NSLog(@"%@",[self.characterVectorArray componentsJoinedByString:@" "]);
     [self.fileManager writeToTextFileCharacterVectorArray:self.characterVectorArray];
+    PCNNet *net = [[PCNNet alloc] initWithCountOfLayers:3];
     
 }
 

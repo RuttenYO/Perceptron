@@ -252,17 +252,9 @@
 		42C3BB9619C5BD9300985256 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
-				42C3BB9719C5BD9300985256 /* Recognize */,
 				42C3BB9819C5BD9300985256 /* Teach */,
 			);
 			path = Providers;
-			sourceTree = "<group>";
-		};
-		42C3BB9719C5BD9300985256 /* Recognize */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Recognize;
 			sourceTree = "<group>";
 		};
 		42C3BB9819C5BD9300985256 /* Teach */ = {

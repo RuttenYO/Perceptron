@@ -30,7 +30,7 @@
 
 - (void)saveToTextFileCharacterVectorArray:(NSMutableArray *)characterVectorArray {
     [characterVectorArray writeToFile:self.fileName atomically:NO];
-    NSLog(@"%@",[self.vectorsInFile componentsJoinedByString:@"\n"]);
+//    NSLog(@"%@",[self.vectorsInFile componentsJoinedByString:@"\n"]);
 }
 
 - (void)writeToTextFileCharacterVectorArray:(NSMutableArray *)characterVectorArray

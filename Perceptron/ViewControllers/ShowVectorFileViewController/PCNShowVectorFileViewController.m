@@ -39,7 +39,7 @@
         }
         vectorFileText = [vectorFileText stringByAppendingString:@"\n"];
     }
-    NSLog(@"%@", vectorFileText);
+//    NSLog(@"%@", vectorFileText);
     [self.vectorFileTextView setText:vectorFileText];
 }
 

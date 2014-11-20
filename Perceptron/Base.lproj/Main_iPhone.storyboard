@@ -131,14 +131,14 @@
                                 </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FEu-Nh-eFc">
-                                <rect key="frame" x="99" y="452" width="123" height="29"/>
+                                <rect key="frame" x="16" y="452" width="246" height="29"/>
                                 <segments>
                                     <segment title="А"/>
                                     <segment title="Г"/>
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwc-cc-2Ob">
-                                <rect key="frame" x="99" y="518" width="123" height="22"/>
+                                <rect key="frame" x="97" y="509" width="123" height="22"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
                                 <state key="normal" title="TEACH">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -165,6 +165,16 @@
                                     <action selector="recognizeButtonDidPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gai-Mm-WSi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVd-Sk-FYj">
+                                <rect key="frame" x="282" y="455" width="22" height="22"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToTrainingSetButtonDidPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4cf-ux-eH5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
@@ -173,6 +183,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addToTrainingSetButton" destination="QVd-Sk-FYj" id="qmL-Wc-ild"/>
                         <outlet property="drawAreaViewContainerView" destination="maz-Jh-dvQ" id="Mcc-0Z-g0p"/>
                         <outlet property="modeSegmentedControl" destination="K9l-Xt-yZK" id="FeD-u2-yiK"/>
                         <outlet property="recognizeAnswerLabel" destination="Yeh-Fo-Vjl" id="SqN-9x-xuV"/>

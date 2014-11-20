@@ -20,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *teachButton;
 @property (strong, nonatomic) IBOutlet UILabel *recognizeAnswerLabel;
 @property (strong, nonatomic) IBOutlet UIButton *recognizeButton;
+@property (strong, nonatomic) IBOutlet UIButton *addToTrainingSetButton;
 
 @property (strong, nonatomic) PCNTeachProvider* teacher;
 @property (strong, nonatomic) UIImageView *characterImageView;
@@ -45,11 +46,13 @@
     if (self.modeSegmentedControl.selectedSegmentIndex == 0) {
             self.teachingCharacterSegmentedControl.hidden = NO;
         self.teachButton.hidden = NO;
+        self.addToTrainingSetButton.hidden = NO;
         self.recognizeAnswerLabel.hidden = YES;
         self.recognizeButton.hidden = YES;
     } else {
             self.teachingCharacterSegmentedControl.hidden = YES;
         self.teachButton.hidden = YES;
+        self.addToTrainingSetButton.hidden = YES;
         self.recognizeAnswerLabel.hidden = NO;
         self.recognizeButton.hidden = NO;
     }
@@ -62,10 +65,13 @@
 
 - (IBAction)teachButtonDidPressed:(id)sender
 {
+    
+}
+
+- (IBAction)addToTrainingSetButtonDidPressed:(id)sender {
     self.characterImageView = [self.drawAreaView trimmedCharacterImage];
     self.teacher = [[PCNTeachProvider alloc] initWithImageView:self.characterImageView delegate:self.drawAreaView];
     [self.teacher saveToFileVectorOfCharacter:self.teachingCharacterSegmentedControl.selectedSegmentIndex];
-    
 }
 
 - (IBAction)recognizeButtonDidPressed:(id)sender {

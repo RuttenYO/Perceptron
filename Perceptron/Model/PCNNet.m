@@ -12,7 +12,6 @@
 @interface PCNNet()
 
 @property (nonatomic, assign) NSInteger countOfLayersAtNet;
-@property (nonatomic, strong) PCNLayer *layer;
 
 @end
 
@@ -22,30 +21,50 @@
 {
     self = [super init];
     if (self) {
-        _countOfLayersAtNet = countOfLayers;
+        self.countOfLayersAtNet = countOfLayers;
         _layers = [[NSMutableArray alloc] init];
         _weights = [[NSMutableArray alloc] init];
         _neuronErrors = [[NSMutableArray alloc] init];
         
-        [self.layers addObject:[self.layer initWithCountOfNeurons:100]];
-        [self.layers addObject:[self.layer initWithCountOfNeurons:20]];
-        [self.layers addObject:[self.layer initWithCountOfNeurons:1]];
+        
+        PCNLayer *firstLayer = [[PCNLayer alloc] initWithCountOfNeurons:100];
+        PCNLayer *secondLayer = [[PCNLayer alloc] initWithCountOfNeurons:20];
+        PCNLayer *thirdLayer = [[PCNLayer alloc] initWithCountOfNeurons:1];
+        [self.layers addObject:firstLayer];
+        [self.layers addObject:secondLayer];
+        [self.layers addObject:thirdLayer];
+        
+        [self assignWeights];
+        
     }
     return self;
 }
 
+
+#pragma mark - Setting Neuroal Net
 - (void)assignWeights {
-    
-    for (int i = 1; i < self.countOfLayersAtNet; i++)
-        for (int j = 0; j < [[self.layers[i] neuronsAtLayer] count]; j++)
-            for (int k = 0; k < [[self.layers[i - 1] neuronsAtLayer] count]; k++) {
-                srand48(time(0));
-                double r = drand48();
-                [self.weights[i][j][k] addObject:[NSNumber numberWithDouble:r]];
+    for (int l = 1; l < self.countOfLayersAtNet; l++) { //ploskosti (2)
+        NSMutableArray *tempLayersArray = [NSMutableArray array];
+        
+        for (int i = 0; i < [[[self.layers objectAtIndex:l] neuronsAtLayer] count]; i++) { //kolonki (20)
+            NSMutableArray *tempNeuronsAtCurrentLayerArray = [NSMutableArray array];
+            
+            for (int j = 0; j < [[[self.layers objectAtIndex:l - 1] neuronsAtLayer] count]; j++) { //stroki (100)
+                [tempNeuronsAtCurrentLayerArray addObject:@(floorf([self getRandom]*100)/100)];
             }
-    NSLog(@"%@", self.weights);
+            [tempLayersArray addObject:tempNeuronsAtCurrentLayerArray];
+        }
+        [self.weights addObject:tempLayersArray];
+    }
+//    NSLog(@"WEIGHTS %@", self.weights);
 }
 
-
+- (float)getRandom {
+    float number = (((float) rand() / RAND_MAX) * 1) -0.5;
+    if (number == 0.00 ) {
+        number = 0.2;
+    }
+    return number;
+}
 
 @end
