@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSMutableArray *weights;
 @property (nonatomic, strong) NSMutableArray *neuronErrors;
 
-- (id)initWithCountOfLayers:(NSInteger) countOfLayers;
+- (id)initWithCountOfLayers:(NSInteger)countOfLayers;
 - (void)assignWeights;
 
 @end

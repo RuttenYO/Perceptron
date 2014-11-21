@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		421A70E219E1EF5800F915EA /* PCNVectorFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 421A70E119E1EF5800F915EA /* PCNVectorFileManager.m */; };
 		42BF8E9B19DA05C300576AAB /* PCNNeuron.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BF8E9A19DA05C300576AAB /* PCNNeuron.m */; };
 		42C3BB4D19C57D8D00985256 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C3BB4C19C57D8D00985256 /* Foundation.framework */; };
 		42C3BB4F19C57D8D00985256 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C3BB4E19C57D8D00985256 /* CoreGraphics.framework */; };
@@ -29,6 +28,8 @@
 		42C3BB9B19C5BD9300985256 /* PCNTeachProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C3BB9A19C5BD9300985256 /* PCNTeachProvider.m */; };
 		42CFD87419FEF95200FBF1C7 /* PCNShowVectorFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CFD87319FEF95100FBF1C7 /* PCNShowVectorFileViewController.m */; };
 		42CFD87719FF036100FBF1C7 /* PCNNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CFD87619FF036100FBF1C7 /* PCNNet.m */; };
+		42E90DCE1A1E7ACA00B2BD16 /* PCNVectorFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E90DCC1A1E7ACA00B2BD16 /* PCNVectorFileManager.m */; };
+		42E90DD11A1E7B0D00B2BD16 /* PCNNeuralNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E90DD01A1E7B0D00B2BD16 /* PCNNeuralNetworkManager.m */; };
 		AC25F1A319E6BB9900A6C9E4 /* PCNLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC25F1A219E6BB9900A6C9E4 /* PCNLayer.m */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		421A70E019E1EF5800F915EA /* PCNVectorFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCNVectorFileManager.h; sourceTree = "<group>"; };
-		421A70E119E1EF5800F915EA /* PCNVectorFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCNVectorFileManager.m; sourceTree = "<group>"; };
 		42BF8E9919DA05C300576AAB /* PCNNeuron.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCNNeuron.h; sourceTree = "<group>"; };
 		42BF8E9A19DA05C300576AAB /* PCNNeuron.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCNNeuron.m; sourceTree = "<group>"; };
 		42C213E819C8D7B7006B75E3 /* PCNColorOfPointProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCNColorOfPointProtocol.h; sourceTree = "<group>"; };
@@ -77,6 +76,10 @@
 		42CFD87319FEF95100FBF1C7 /* PCNShowVectorFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCNShowVectorFileViewController.m; sourceTree = "<group>"; };
 		42CFD87519FF036100FBF1C7 /* PCNNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCNNet.h; sourceTree = "<group>"; };
 		42CFD87619FF036100FBF1C7 /* PCNNet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCNNet.m; sourceTree = "<group>"; };
+		42E90DCB1A1E7ACA00B2BD16 /* PCNVectorFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCNVectorFileManager.h; sourceTree = "<group>"; };
+		42E90DCC1A1E7ACA00B2BD16 /* PCNVectorFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCNVectorFileManager.m; sourceTree = "<group>"; };
+		42E90DCF1A1E7B0D00B2BD16 /* PCNNeuralNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCNNeuralNetworkManager.h; sourceTree = "<group>"; };
+		42E90DD01A1E7B0D00B2BD16 /* PCNNeuralNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCNNeuralNetworkManager.m; sourceTree = "<group>"; };
 		AC25F1A119E6BB9900A6C9E4 /* PCNLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCNLayer.h; sourceTree = "<group>"; };
 		AC25F1A219E6BB9900A6C9E4 /* PCNLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCNLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,8 +111,8 @@
 		421A70DF19E1EF5800F915EA /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				421A70E019E1EF5800F915EA /* PCNVectorFileManager.h */,
-				421A70E119E1EF5800F915EA /* PCNVectorFileManager.m */,
+				42E90DCA1A1E7ACA00B2BD16 /* FileManagers */,
+				42E90DCD1A1E7ACA00B2BD16 /* NeuralNetworkManager */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -275,6 +278,24 @@
 			path = ShowVectorFileViewController;
 			sourceTree = "<group>";
 		};
+		42E90DCA1A1E7ACA00B2BD16 /* FileManagers */ = {
+			isa = PBXGroup;
+			children = (
+				42E90DCB1A1E7ACA00B2BD16 /* PCNVectorFileManager.h */,
+				42E90DCC1A1E7ACA00B2BD16 /* PCNVectorFileManager.m */,
+			);
+			path = FileManagers;
+			sourceTree = "<group>";
+		};
+		42E90DCD1A1E7ACA00B2BD16 /* NeuralNetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				42E90DCF1A1E7B0D00B2BD16 /* PCNNeuralNetworkManager.h */,
+				42E90DD01A1E7B0D00B2BD16 /* PCNNeuralNetworkManager.m */,
+			);
+			path = NeuralNetworkManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -376,7 +397,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				42BF8E9B19DA05C300576AAB /* PCNNeuron.m in Sources */,
-				421A70E219E1EF5800F915EA /* PCNVectorFileManager.m in Sources */,
 				42C3BB5D19C57D8D00985256 /* PCNAppDelegate.m in Sources */,
 				AC25F1A319E6BB9900A6C9E4 /* PCNLayer.m in Sources */,
 				42CFD87419FEF95200FBF1C7 /* PCNShowVectorFileViewController.m in Sources */,
@@ -384,7 +404,9 @@
 				42C3BB8819C5835900985256 /* PCNMainViewController.m in Sources */,
 				42C3BB5919C57D8D00985256 /* main.m in Sources */,
 				42C3BB9B19C5BD9300985256 /* PCNTeachProvider.m in Sources */,
+				42E90DCE1A1E7ACA00B2BD16 /* PCNVectorFileManager.m in Sources */,
 				42C3BB9019C584F300985256 /* PCNDrawAreaView.m in Sources */,
+				42E90DD11A1E7B0D00B2BD16 /* PCNNeuralNetworkManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

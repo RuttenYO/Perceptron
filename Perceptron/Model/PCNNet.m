@@ -17,15 +17,13 @@
 
 @implementation PCNNet
 
-- (id)initWithCountOfLayers:(NSInteger) countOfLayers;
-{
+- (id)initWithCountOfLayers:(NSInteger)countOfLayers {
     self = [super init];
     if (self) {
         self.countOfLayersAtNet = countOfLayers;
         _layers = [[NSMutableArray alloc] init];
         _weights = [[NSMutableArray alloc] init];
         _neuronErrors = [[NSMutableArray alloc] init];
-        
         
         PCNLayer *firstLayer = [[PCNLayer alloc] initWithCountOfNeurons:100];
         PCNLayer *secondLayer = [[PCNLayer alloc] initWithCountOfNeurons:20];
@@ -41,7 +39,7 @@
 }
 
 
-#pragma mark - Setting Neuroal Net
+#pragma mark - Setting Neuroal Network
 - (void)assignWeights {
     for (int l = 1; l < self.countOfLayersAtNet; l++) { //ploskosti (2)
         NSMutableArray *tempLayersArray = [NSMutableArray array];

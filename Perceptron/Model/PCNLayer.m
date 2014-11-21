@@ -11,7 +11,7 @@
 @interface PCNLayer()
 
 @property (nonatomic, assign) NSInteger countOfNeuronsAtLayer;
-@property (nonatomic, strong) PCNNeuron *neuron;
+
 
 @end
 

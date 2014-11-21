@@ -59,9 +59,9 @@
                 if (isBlackPixel) break;
             }
             if (isBlackPixel){
-                [self.characterVectorArray addObject:[NSNumber numberWithInt:1]];
+                [self.characterVectorArray addObject:@1];
             }else{
-                [self.characterVectorArray addObject:[NSNumber numberWithInt:0]];
+                [self.characterVectorArray addObject:@0];
             }
         }
     }
@@ -71,13 +71,13 @@
 {    
     [self vectorOfCharacter];
     if (characterType == 0) {
-        [self.characterVectorArray addObject:[NSNumber numberWithInt:1]];
+        [self.characterVectorArray addObject:@1];
     } else {
-        [self.characterVectorArray addObject:[NSNumber numberWithInt:-1]];
+        [self.characterVectorArray addObject:@(-1)];
     }
     NSLog(@"%@",[self.characterVectorArray componentsJoinedByString:@" "]);
     [self.fileManager writeToTextFileCharacterVectorArray:self.characterVectorArray];
-    PCNNet *net = [[PCNNet alloc] initWithCountOfLayers:3];
+//    PCNNet *net = [[PCNNet alloc] initWithCountOfLayers:3];
     
 }
 
