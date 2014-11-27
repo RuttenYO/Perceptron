@@ -59,17 +59,16 @@ const NSInteger kMaxEpocheCount = 100;
     int i = 0;
     for (PCNNeuron *neuron in [[[self.net layers] objectAtIndex:0] neuronsAtLayer]) {
         NSNumber *output = [vectorArray objectAtIndex:i];
-        neuron.output = output.doubleValue;
+        neuron.outputValue = output.doubleValue;
         i++;
     }
 //    for (int j = 0; j < [[[[self.net layers] objectAtIndex:0] neuronsAtLayer] count]; j++) {
 //        NSNumber *output = [vectorArray objectAtIndex:i];
-////        [[[[[self.net layers] objectAtIndex:0] neuronsAtLayer] objectAtIndex:j] output] = output.doubleValue;
-//        [[[self.net layers] objectAtIndex:0] neuronsAtLayer[j]].output = output.doubleValue;
+//        PCNNeuron *neuron = [PCNNeuron new];
+////        [[[[[self.net layers] objectAtIndex:0] neuronsAtLayer] objectAtIndex:j] outputValue];
+////        (PCNNeuron)[[[self.net layers] objectAtIndex:0] neuronsAtLayer[j]].output = output.doubleValue;
 //
 //    }
-//    for (int i = 0; i < net.layers[0].neuronsOnLayer.Length; i++)
-//        net.layers[0].neuronsOnLayer[i].output = qList.ElementAt(i);
 }
 
 - (double)getAnswerFromTeacherForLearningArraysAtIndex:(int)index
@@ -92,20 +91,19 @@ const NSInteger kMaxEpocheCount = 100;
 
 #pragma mark - Algorytms
 
-//- (void)forwardPassWithAnswer:(double)answer ifNeeded:(BOOL)ifNeeded
-//{
-//    for (int l = 1; l < kLayersCount; l++) {
-//        for (int i=0; i<[[self.net.layers[l] neuronsAtLayer] count]; i++) {
-//            double summator=0;
-//            for (int j = 0; j < [[self.net.layers[l - 1] neuronsAtLayer] count]; j++) {
-//                summator += [(NSNumber *)self.net.weights[l][i][j] doubleValue] * [self.net.layers[l-1][j] output];
-//            }
-//            PCNNeuron *neuron = [[self.net.layers[l] neuronsAtLayer] objectAtIndex:i];
-//            neuron.neuronState = summator;
-//            net.layers[l].neuronsOnLayer[i].output = activationFunction(summator);
-//        }
-//    }
-//    
+- (void)forwardPassWithAnswer:(double)answer ifNeeded:(BOOL)ifNeeded
+{
+    for (int l = 1; l < kLayersCount; l++) {
+        for (int i=0; i<[[self.net.layers[l] neuronsAtLayer] count]; i++) {
+            double summator=0;
+            for (int j = 0; j < [[self.net.layers[l - 1] neuronsAtLayer] count]; j++) {
+                summator += [(NSNumber *)self.net.weights[l][i][j] doubleValue] * [self.net.layers[l-1][j] outputValue];
+            }
+            [self.net.layers[l][i] setNeuronState:summator];
+            [self.net.layers[l][i] setOutputValue: [self activationFunction:summator]];
+        }
+    }
+    
 //    if (ifNeeded)
 //    {
 //        currentError = 0;
@@ -115,7 +113,7 @@ const NSInteger kMaxEpocheCount = 100;
 //        currentError /= 2;
 //        errors.Add(currentError);
 //    }
-//}
+}
 
 
 @end

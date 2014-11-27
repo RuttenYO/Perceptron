@@ -9,5 +9,7 @@
 #import "PCNNeuron.h"
 
 @implementation PCNNeuron
+//@synthesize outputValue;
+//@synthesize neuronState;
 
 @end
