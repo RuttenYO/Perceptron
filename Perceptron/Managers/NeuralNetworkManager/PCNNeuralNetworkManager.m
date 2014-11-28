@@ -13,6 +13,7 @@
 const NSInteger kLayersCount = 3;
 const NSInteger kNumberOfLearningVectors = 70;
 const NSInteger kMaxEpocheCount = 100;
+const double kLearningRate = 0.5;
 
 @interface PCNNeuralNetworkManager()
 
@@ -21,8 +22,12 @@ const NSInteger kMaxEpocheCount = 100;
 @property (nonatomic, strong) PCNNet *net;
 @property (nonatomic, strong) NSMutableArray *learningArrays;
 @property (nonatomic, strong) NSMutableArray *testingArrays;
+@property (nonatomic, strong) NSMutableArray *errors;
+
 
 @property (nonatomic, assign) NSInteger currentEpocheNumber;
+@property (nonatomic, assign) double answerFromTeacher;
+@property (nonatomic, assign) double currentError;
 
 @end
 
@@ -37,6 +42,7 @@ const NSInteger kMaxEpocheCount = 100;
         _net = [[PCNNet alloc] initWithCountOfLayers:kLayersCount];
         _learningArrays = [[NSMutableArray alloc] init];
         _testingArrays = [[NSMutableArray alloc] init];
+        _errors = [NSMutableArray new];
     }
     return self;
 }
@@ -71,28 +77,25 @@ const NSInteger kMaxEpocheCount = 100;
 //    }
 }
 
-- (double)getAnswerFromTeacherForLearningArraysAtIndex:(int)index
-{
-    NSNumber *answer =  [[self.learningArrays objectAtIndex:index] objectAtIndex:100];
-    return answer.doubleValue;
+- (void)setAnswerFromTeacherForLearningArrayAtIndex:(int)index {
+    self.answerFromTeacher = [(NSNumber *)[[self.learningArrays objectAtIndex:index] lastObject] doubleValue];
+//    NSNumber *answer =  [[self.learningArrays objectAtIndex:index] objectAtIndex:100];
+//    return answer.doubleValue;
 }
 
 #define alpha 1
-- (double)activationFunction:(double)x
-{
+- (double)activationFunction:(double)x {
     return tanh(alpha*x);
 }
 
-- (double) activationFunctionDerivative:(double)x
-{
+- (double) activationFunctionDerivative:(double)x {
     double t = tanh(alpha * x);
     return alpha * (1 - t * t);
 }
 
 #pragma mark - Algorytms
 
-- (void)forwardPassWithAnswer:(double)answer ifNeeded:(BOOL)ifNeeded
-{
+- (void)forwardPass {
     for (int l = 1; l < kLayersCount; l++) {
         for (int i=0; i<[[self.net.layers[l] neuronsAtLayer] count]; i++) {
             double summator=0;
@@ -103,17 +106,67 @@ const NSInteger kMaxEpocheCount = 100;
             [self.net.layers[l][i] setOutputValue: [self activationFunction:summator]];
         }
     }
+}
+
+- (void)calculateNetworkError {
+    self.currentError = 0;
+    for (int i = 0; [[self.net.layers[kLayersCount - 1] neuronsAtLayer] count]; i++) {
+        self.currentError += 0.5*pow([self.net.layers[kLayersCount - 1][i] outputValue], 2);
+    }
+    [self.errors addObject:@(self.currentError)];
+}
+
+- (void)backwardPass {
+    [self assignNeuronErrors];
+    [self assignNewWeights];
+}
+
+- (void) assignNeuronErrors {
+    for (int l = kLayersCount - 1; l > 0; l--) {
+        for (int i = 0; i < [[self.net.layers[l] neuronsAtLayer] count]; i++) {
+            double neuronError=0;
+            if (l == (kLayersCount - 1)) {
+                [self.net.layers[l][i] setNeuronError:[self.net.layers[l][i] outputValue] - self.answerFromTeacher];
+            }
+            else {
+                for (int j = 0; j < [[self.net.layers[l+1] neuronsAtLayer] count]; j++)
+                    neuronError += [self.net.layers[l+1][j] neuronError]  * [self.net.weights[l + 1][j][i] doubleValue];
+//                neuronError *= [self activationFunctionDerivative:[self.net.layers[l][i] neuronState]];
+                [self.net.layers[l][i] setNeuronError:neuronError];
+            }
+        }
+    }
+}
+
+- (void)assignNewWeights {
+    for (int l = 1; l < kLayersCount; l++) {
+        for (int i = 0; i < [[[self.net.layers objectAtIndex:l] neuronsAtLayer] count]; i++) { //kolonki (20)
+            for (int j = 0; j < [[[self.net.layers objectAtIndex:l - 1] neuronsAtLayer] count]; j++) {
+                self.net.weights[l][i][j] = @([self.net.weights[l][i][j] doubleValue] - kLearningRate * [self.net.layers[l][i] neuronError] * [self.net.layers[l-1][j] outputValue]);
+            }
+        }
+    }
     
-//    if (ifNeeded)
-//    {
-//        currentError = 0;
-//        for (int i = 0; i < net.layers[countOfLayersInNet - 1].neuronsOnLayer.Length; i++)
-//            currentError += Math.Pow(net.layers[countOfLayersInNet - 1].neuronsOnLayer[i].output - answer, 2);
+//    for (int l = 1; l < kLayersCount; l++) { //ploskosti (2)
+//        NSMutableArray *tempLayersArray = [NSMutableArray array];
 //        
-//        currentError /= 2;
-//        errors.Add(currentError);
+//        for (int i = 0; i < [[[self.net.layers objectAtIndex:l] neuronsAtLayer] count]; i++) { //kolonki (20)
+//            NSMutableArray *tempNeuronsAtCurrentLayerArray = [NSMutableArray array];
+//            
+//            for (int j = 0; j < [[[self.net.layers objectAtIndex:l - 1] neuronsAtLayer] count]; j++) { //stroki (100)
+//                [tempNeuronsAtCurrentLayerArray addObject:@(floorf([self getRandom]*100)/100)];
+//            }
+//            [tempLayersArray addObject:tempNeuronsAtCurrentLayerArray];
+//        }
+//        [self.net.weights addObject:tempLayersArray];
 //    }
 }
+
+- (void)teachNetWork {
+    
+}
+
+
 
 
 @end

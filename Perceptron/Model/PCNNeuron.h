@@ -12,5 +12,6 @@
 
 @property (nonatomic, readwrite) double neuronState;
 @property (nonatomic, readwrite) double outputValue;
+@property (nonatomic, readwrite) double neuronError;
 
 @end
