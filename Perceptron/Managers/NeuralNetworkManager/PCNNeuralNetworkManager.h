@@ -10,8 +10,10 @@
 
 @interface PCNNeuralNetworkManager : NSObject
 
-
-
 - (void)setSamplesWithLearningArray:(NSMutableArray *)learningArray;
+- (void)teachNetwork;
+- (double)recognizeWithVectorArray:(NSMutableArray *)vectorArray;
+
+
 
 @end

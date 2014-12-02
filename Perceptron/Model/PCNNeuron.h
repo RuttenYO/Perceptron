@@ -10,8 +10,8 @@
 
 @interface PCNNeuron : NSObject
 
-@property (nonatomic, readwrite) double neuronState;
-@property (nonatomic, readwrite) double outputValue;
-@property (nonatomic, readwrite) double neuronError;
+@property (nonatomic, assign) double neuronState;
+@property (nonatomic, assign) double outputValue;
+@property (nonatomic, assign) double neuronError;
 
 @end

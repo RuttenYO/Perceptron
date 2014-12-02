@@ -10,6 +10,7 @@
 #import "PCNDrawAreaView.h"
 #import "PCNTeachProvider.h"
 #import "PCNVectorFileManager.h"
+#import "PCNNeuralNetworkManager.h"
 
 @interface PCNMainViewController ()
 
@@ -25,6 +26,8 @@
 @property (strong, nonatomic) PCNTeachProvider* teacher;
 @property (strong, nonatomic) UIImageView *characterImageView;
 
+@property (strong, nonatomic) PCNNeuralNetworkManager *neuralNetworkManager;
+
 @end
 
 @implementation PCNMainViewController
@@ -33,6 +36,8 @@
 {
     [super viewDidLoad];
     _drawAreaView = [[PCNDrawAreaView alloc] init];
+    _neuralNetworkManager = [[PCNNeuralNetworkManager alloc] init];
+    
     [_drawAreaViewContainerView addSubview:self.drawAreaView];
     self.recognizeAnswerLabel.hidden = YES;
     self.recognizeButton.hidden = YES;
@@ -63,9 +68,10 @@
     [fileManager deleteVectorFile];
 }
 
-- (IBAction)teachButtonDidPressed:(id)sender
-{
-    
+- (IBAction)teachButtonDidPressed:(id)sender {
+    PCNVectorFileManager *fileManager = [[PCNVectorFileManager alloc] init];
+    [self.neuralNetworkManager setSamplesWithLearningArray:[fileManager vectorsArray]];
+    [self.neuralNetworkManager teachNetwork];
 }
 
 - (IBAction)addToTrainingSetButtonDidPressed:(id)sender {
@@ -75,8 +81,16 @@
 }
 
 - (IBAction)recognizeButtonDidPressed:(id)sender {
-    //trololo
-    
+    self.teacher = [[PCNTeachProvider alloc] initWithImageView:self.characterImageView delegate:self.drawAreaView];
+    double answer = [self.neuralNetworkManager recognizeWithVectorArray:[self.teacher characterVectorArray]];
+    if (answer > 0.2) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Answer" message:@"It's character A" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+    }
+    else if (answer < -0.2) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Answer" message:@"It's character Г" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+    }
 }
 
 -(BOOL)shouldAutorotate {
