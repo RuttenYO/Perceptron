@@ -11,7 +11,6 @@
 @interface PCNLayer : PCNNeuron
 
 @property (nonatomic, strong) NSMutableArray *neuronsAtLayer;
-@property (nonatomic, strong) PCNNeuron *neuron;
 
 - (id)initWithCountOfNeurons:(NSInteger)countOfNeurons;
 

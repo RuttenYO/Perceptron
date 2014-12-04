@@ -11,7 +11,7 @@
 @interface PCNLayer()
 
 @property (nonatomic, assign) NSInteger countOfNeuronsAtLayer;
-
+@property (nonatomic, strong) PCNNeuron *neuron;
 
 @end
 
@@ -22,10 +22,10 @@
     self = [super init];
     if (self) {
         _countOfNeuronsAtLayer = countOfNeurons;
-        _neuron = [[PCNNeuron alloc] init];
         _neuronsAtLayer = [[NSMutableArray alloc] init];
         
         for (int i = 0; i < self.countOfNeuronsAtLayer; i++) {
+            _neuron = [[PCNNeuron alloc] init];
             [self.neuronsAtLayer addObject:self.neuron];
         }
     }

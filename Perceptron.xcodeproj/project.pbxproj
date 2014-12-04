@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4278BE851A2FE16200457AC8 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4278BE811A2FE16200457AC8 /* LICENSE */; };
+		4278BE861A2FE16200457AC8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278BE831A2FE16200457AC8 /* MBProgressHUD.m */; };
+		4278BE871A2FE16200457AC8 /* README.mdown in Sources */ = {isa = PBXBuildFile; fileRef = 4278BE841A2FE16200457AC8 /* README.mdown */; };
 		42BF8E9B19DA05C300576AAB /* PCNNeuron.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BF8E9A19DA05C300576AAB /* PCNNeuron.m */; };
 		42C3BB4D19C57D8D00985256 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C3BB4C19C57D8D00985256 /* Foundation.framework */; };
 		42C3BB4F19C57D8D00985256 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C3BB4E19C57D8D00985256 /* CoreGraphics.framework */; };
@@ -44,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4278BE811A2FE16200457AC8 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4278BE821A2FE16200457AC8 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		4278BE831A2FE16200457AC8 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		4278BE841A2FE16200457AC8 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.mdown; sourceTree = "<group>"; };
 		42BF8E9919DA05C300576AAB /* PCNNeuron.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCNNeuron.h; sourceTree = "<group>"; };
 		42BF8E9A19DA05C300576AAB /* PCNNeuron.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCNNeuron.m; sourceTree = "<group>"; };
 		42C213E819C8D7B7006B75E3 /* PCNColorOfPointProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCNColorOfPointProtocol.h; sourceTree = "<group>"; };
@@ -117,6 +124,25 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		4278BE7F1A2FE16200457AC8 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				4278BE801A2FE16200457AC8 /* MBProgressHUD */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		4278BE801A2FE16200457AC8 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				4278BE811A2FE16200457AC8 /* LICENSE */,
+				4278BE821A2FE16200457AC8 /* MBProgressHUD.h */,
+				4278BE831A2FE16200457AC8 /* MBProgressHUD.m */,
+				4278BE841A2FE16200457AC8 /* README.mdown */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		42BF8E9819DA05C300576AAB /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +208,7 @@
 				42C3BB9619C5BD9300985256 /* Providers */,
 				42C3BB8419C5835900985256 /* ViewControllers */,
 				42C3BB8C19C584F300985256 /* View */,
+				4278BE7F1A2FE16200457AC8 /* Libs */,
 				42C3BB5319C57D8D00985256 /* Supporting Files */,
 			);
 			path = Perceptron;
@@ -373,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4278BE851A2FE16200457AC8 /* LICENSE in Resources */,
 				42C3BB6319C57D8D00985256 /* Main_iPad.storyboard in Resources */,
 				42C3BB6819C57D8D00985256 /* Images.xcassets in Resources */,
 				42C3BB6019C57D8D00985256 /* Main_iPhone.storyboard in Resources */,
@@ -396,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4278BE871A2FE16200457AC8 /* README.mdown in Sources */,
 				42BF8E9B19DA05C300576AAB /* PCNNeuron.m in Sources */,
 				42C3BB5D19C57D8D00985256 /* PCNAppDelegate.m in Sources */,
 				AC25F1A319E6BB9900A6C9E4 /* PCNLayer.m in Sources */,
@@ -403,6 +432,7 @@
 				42CFD87719FF036100FBF1C7 /* PCNNet.m in Sources */,
 				42C3BB8819C5835900985256 /* PCNMainViewController.m in Sources */,
 				42C3BB5919C57D8D00985256 /* main.m in Sources */,
+				4278BE861A2FE16200457AC8 /* MBProgressHUD.m in Sources */,
 				42C3BB9B19C5BD9300985256 /* PCNTeachProvider.m in Sources */,
 				42E90DCE1A1E7ACA00B2BD16 /* PCNVectorFileManager.m in Sources */,
 				42C3BB9019C584F300985256 /* PCNDrawAreaView.m in Sources */,

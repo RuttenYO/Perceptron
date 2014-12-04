@@ -11,6 +11,9 @@
 #import "PCNTeachProvider.h"
 #import "PCNVectorFileManager.h"
 #import "PCNNeuralNetworkManager.h"
+#import "MBProgressHUD.h"
+
+static const NSTimeInterval IBCHUDDismissTimeInterval = 1.5;
 
 @interface PCNMainViewController ()
 
@@ -72,6 +75,8 @@
     PCNVectorFileManager *fileManager = [[PCNVectorFileManager alloc] init];
     [self.neuralNetworkManager setSamplesWithLearningArray:[fileManager vectorsArray]];
     [self.neuralNetworkManager teachNetwork];
+//    [MBProgressHUD hideHUDForView:self.view animated:NO];
+    
 }
 
 - (IBAction)addToTrainingSetButtonDidPressed:(id)sender {
@@ -81,16 +86,17 @@
 }
 
 - (IBAction)recognizeButtonDidPressed:(id)sender {
+    self.characterImageView = [self.drawAreaView trimmedCharacterImage];
     self.teacher = [[PCNTeachProvider alloc] initWithImageView:self.characterImageView delegate:self.drawAreaView];
+    [self.teacher vectorOfCharacter];
     double answer = [self.neuralNetworkManager recognizeWithVectorArray:[self.teacher characterVectorArray]];
     if (answer > 0.2) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Answer" message:@"It's character A" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        [alert show];
+        self.recognizeAnswerLabel.text = @"A";
     }
     else if (answer < -0.2) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Answer" message:@"It's character Г" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        [alert show];
+        self.recognizeAnswerLabel.text = @"Г";
     }
+
 }
 
 -(BOOL)shouldAutorotate {

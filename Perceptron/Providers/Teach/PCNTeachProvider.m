@@ -75,9 +75,8 @@
     } else {
         [self.characterVectorArray addObject:@(-1)];
     }
-    NSLog(@"%@",[self.characterVectorArray componentsJoinedByString:@" "]);
+//    NSLog(@"%@",[self.characterVectorArray componentsJoinedByString:@" "]);
     [self.fileManager writeToTextFileCharacterVectorArray:self.characterVectorArray];
-//    PCNNet *net = [[PCNNet alloc] initWithCountOfLayers:3];
     
 }
 

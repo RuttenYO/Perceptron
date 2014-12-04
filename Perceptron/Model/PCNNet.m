@@ -23,7 +23,6 @@
         self.countOfLayersAtNet = countOfLayers;
         _layers = [[NSMutableArray alloc] init];
         _weights = [[NSMutableArray alloc] init];
-//        _neuronErrors = [[NSMutableArray alloc] init];
         
         PCNLayer *firstLayer = [[PCNLayer alloc] initWithCountOfNeurons:100];
         PCNLayer *secondLayer = [[PCNLayer alloc] initWithCountOfNeurons:20];
